@@ -1,9 +1,10 @@
 .navigation__menu{
     display:flex;
+
 }
 .navigation__item:not(:last-child){
     position:relative;
-    margin-right:35px;
+    margin-right:39px;
 
     &:after{
         content:"⦁";

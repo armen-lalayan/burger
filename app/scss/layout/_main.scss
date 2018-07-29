@@ -15,14 +15,14 @@
     background:
                 url(../img/header/burger.png) right top no-repeat,
                 url(../img/header/burger-drops.png) left 35% no-repeat;
-                margin-right:20px;
+                margin-right:10px;
 }
 .burger__text{
     max-width:410px;
 }
 .burger__title{
     color: $title-color;
-    margin-bottom:17px;
+    margin:85px 0 30px;
 }
 .burger__text-desc{
     color:$primary-text-color;
