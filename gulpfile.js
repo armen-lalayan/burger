@@ -11,7 +11,10 @@ var gulp          = require('gulp'),
 		autoprefixer  = require('gulp-autoprefixer'),
 		notify        = require("gulp-notify"),
 		rsync         = require('gulp-rsync'),
-		sourcemaps	  = require('gulp-sourcemaps');
+		sourcemaps	  = require('gulp-sourcemaps'),
+		wait 		  = require('gulp-wait');
+
+
 
 gulp.task('browser-sync', function() {
 	browsersync({
@@ -27,6 +30,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('styles', function() {
 	return gulp.src('app/'+syntax+'/*.'+syntax+'')
+	.pipe(wait(500))
 	.pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
 		// .pipe(rename({ suffix: '.min', prefix : '' }))
@@ -70,3 +74,4 @@ gulp.task('watch', ['styles', 'js', 'browser-sync'], function() {
 });
 
 gulp.task('default', ['watch']);
+

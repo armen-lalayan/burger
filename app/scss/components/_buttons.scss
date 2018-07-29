@@ -1,0 +1,13 @@
+.button{
+    font:500 13px/30px Ubuntu;
+    color:$primary-text-color;
+    text-transform: uppercase;
+    background-color:$buttons-color;
+    border-radius:5px;
+    padding:2px 15px;
+
+    &:hover{
+        cursor: pointer;
+        background-color:$buttons-hover;
+    }
+}
