@@ -5,9 +5,15 @@ $orange:#f9b43b;
 $dark-gray:#2f3234;
 $light-gray:#82807f;
 $white:#ffffff;
+
 //functional variables
 $primary-text-color:$white;
 $secondary-text-color:$dark-gray;
 $buttons-color:$tomato;
 $buttons-hover:$dark-tomato;
 $title-color:$orange;
+
+// vidth device
+$tablets:768px;
+$phones:480px;
+$phones-xs:320px;

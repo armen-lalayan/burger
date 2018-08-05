@@ -12,7 +12,9 @@ var gulp          = require('gulp'),
 		notify        = require("gulp-notify"),
 		rsync         = require('gulp-rsync'),
 		sourcemaps	  = require('gulp-sourcemaps'),
-		wait 		  = require('gulp-wait');
+		wait 		  = require('gulp-wait'),
+		px2rem 		  = require('gulp-px-to-rem'),
+		svgSprite     = require("gulp-svg-sprites");
 
 
 
@@ -75,3 +77,14 @@ gulp.task('watch', ['styles', 'js', 'browser-sync'], function() {
 
 gulp.task('default', ['watch']);
 
+gulp.task('sprites', function () {
+    return gulp.src('app/img/svg/*.svg')
+        .pipe(svgSprite())
+        .pipe(gulp.dest("app"));
+});
+
+// gulp.task('default', function(){
+//     gulp.src('./app/css/main.css')
+//         .pipe(px2rem({accuracy:2}))
+//         .pipe(gulp.dest('./dist'));
+// });

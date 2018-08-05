@@ -1,10 +1,15 @@
 .switcher{
     position:fixed;
-    top:95px;
-    right:55px;
+    z-index:99;
+    top:rem(95px);
+    right:rem(55px);
+
+    @include tablets{
+        display:none;
+    }
 }
 .switcher__page-item{
-    margin-bottom:15px;
+    margin-bottom:rem(15px);
 }
 .switcher__page-link{
     position:relative;
@@ -12,8 +17,8 @@
     &:before{
         content:"";
         display:block;
-        width:6px;
-        height:6px;
+        width:rem(6px);
+        height:rem(6px);
         border-radius:50%;
         background-color:$primary-text-color;
     }
@@ -21,12 +26,12 @@
         content:"";
         display:block;
         position:absolute;
-        top:-11px;
-        left:-5px;
-        width:14px;
-        height:14px;
+        top:rem(-11px);
+        left:rem(-5px);
+        width:rem(14px);
+        height:rem(14px);
         border-radius:50%;
-        border: 1px solid $primary-text-color;
+        border: rem(1px) solid $primary-text-color;
         opacity:0;
         transition:0.3s;
     }
