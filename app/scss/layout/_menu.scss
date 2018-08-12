@@ -45,6 +45,13 @@
     &-diet{
         background:url(../img/menu/accordion-diet.jpg) right center / cover no-repeat;
     }
+
+    @include phones{
+        width:rem(60px); 
+    }
+    @include phones-xs{
+        width:rem(40px); 
+    }
 }
 .menu__link-title{
     white-space:nowrap;
@@ -52,6 +59,15 @@
     transform-origin: 0 0;
     font-size:40px;
     color:$primary-text-color;
+
+    @include phones{
+        font-size:28px;
+        line-height:60px;
+    }
+    @include phones-xs{
+        font-size:24px;
+        line-height:40px;
+    }
 }
 
 .menu__item-text{
@@ -62,18 +78,18 @@
     font:300 14px/24px Ubuntu;
 
     &:after{
+        display:none;
         content:'';
-        display:block;
         width:rem(20px);
         height:rem(20px);
         position:absolute;
         top:rem(40px);
         right:rem(20px);
         background:url(../img/menu/rectangle.png) center center no-repeat;
-    }
 
-    @include phones{
-
+        @include tablets{
+            display:block;
+        }
     }
 
     p{
