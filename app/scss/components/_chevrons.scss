@@ -2,13 +2,13 @@
     text-align:center;
 }
 .scroll__wrap{
-    width: 36px;
-    height: 21px;
+    width: rem(36px);
+    height: rem(21px);
 }
 .scroll__chevron{
     fill:none;
     stroke:$primary-text-color;
-    stroke-width:2px;
+    stroke-width:rem(2px);
     stroke-linejoin: round;
     stroke-linecap: round;
 }

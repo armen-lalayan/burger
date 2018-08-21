@@ -5,9 +5,9 @@
 }
 .logo__link{
     display:block;
-    width: 92px;
-    height: 69px;
-    margin-right:50px;
+    width: rem(92px);
+    height: rem(69px);
+    margin-right:rem(50px);
     background:url(../img/header/logo.png) center center no-repeat;
 }
 .logo__name{

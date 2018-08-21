@@ -1,0 +1,57 @@
+.icon {
+    font-size: 10px;
+    color:red;
+}
+
+.icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("../svg/sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 12.6em 17.8em;
+}
+
+.no-svg .icon:before {
+    background-image: url("../svg/sprite.png");
+}
+
+
+
+  .icon.fb:before {
+      background-position: 0em 0em;
+      width: 3.6711em;
+      height: 3.6711em;
+  }
+
+
+
+
+  .icon.inst:before {
+      background-position: 0em -3.7em;
+      width: 3.6662999999999997em;
+      height: 3.6664000000000003em;
+  }
+
+
+
+
+  .icon.twitter:before {
+      background-position: 0em -7.4em;
+      width: 3.7453000000000003em;
+      height: 3.121em;
+  }
+
+
+
+
+  .icon.vk:before {
+    background-position: 0em -10.6em;
+      width: 12.6em;
+      height: 7.2em;
+  }
+
+
+
+
+
