@@ -8,13 +8,17 @@
     &:not(:first-child){
         margin-left:rem(20px);
     }
+
+    :hover .svg-sprite{
+        fill:#fff;
+    }
 }
 .svg-sprite{
     width:rem(20px);
     height:rem(20px);
     fill:#595959;
 
-    :hover{
-        fill:#fff;
-    }
+    // :hover{
+    //     fill:#fff;
+    // }
 }

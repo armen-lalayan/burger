@@ -5,12 +5,19 @@
 .slide__container{
     position:relative;
 }
+
 .slider__slide{
+    margin:25px 0;
     display:flex;
+    justify-content:center;
+    align-items:center;
     position:relative;
+    border:none;
+    outline: none;
 
     @include tablets{
         flex-direction:column;
+        margin-top:100px;
     }
 }
 .slide__img{
@@ -18,6 +25,21 @@
     align-items:center;
     justify-content:center;
     flex:1;
+    max-width:rem(420px);
+    margin-right:10px;
+
+    @include tablets{
+        height:340px;
+    }
+
+    @include phones{
+        height:250px;
+        width:90%;
+        margin:0 auto;
+    }
+    @include phones-xs{
+        height:200px;
+    }
 }
 .slide__img-pic{
     max-width: 100%;
@@ -28,6 +50,7 @@
 
     @include tablets{
         text-align:center;
+        max-width:570px;
     }
 }
 .descriptoin__title{
@@ -42,9 +65,9 @@
     margin-bottom:rem(40px);
 
     @include phones{
-        font-size:50px;
+        font-size:45px;
         line-height:52px;
-        margin-bottom:rem(20px);
+        margin-bottom:rem(10px);
     }
     @include phones-xs{
         font-size:35px;
@@ -96,6 +119,11 @@
     position:absolute;
     width:rem(90px);
     height:rem(90px);
+
+    @include phones{
+        width:rem(70px);
+        height:rem(70px);
+  }
 }
 
 .slide__composition{
@@ -104,44 +132,60 @@
     border-radius:rem(5px);
     background:
                 url(../img/slider/burger-litle.png) center center no-repeat,
-                $buttons-color;
+                rgba(228,80,40, 0.8);
     cursor:pointer;
 
     @include tablets{
-        top:rem(-90px);
+        top:rem(-60px);
+        left:rem(100px);
     }
     @include phones{
-        top:rem(-65px);
-        left:rem(-20px);
-  }
+        top:rem(-50px);
+        left:rem(20px);
+    }
+    @include phones-xs{
+        left:rem(0px);
+    }
 }
 .slide__kkal{
     bottom:rem(-20px);
-    background:url(../img/slider/kkal.png) center center no-repeat;
+    left:rem(-5px);
+    background:url(../img/slider/kkal.png) center center / contain no-repeat;
 
     @include tablets{
-        right:0;
-        top:rem(-90px);
+        left:auto;
+        right:rem(120px);
+        top:rem(-60px);
     }
     @include phones{
-        top:rem(-65px);
-        right:rem(-30px);
+        top:rem(-50px);
+        right:rem(20px);
+    }
+    @include phones-xs{
+        right:rem(0px);
     }
 }
 
 // -----------------------------   composotion__menu
 .composotion__menu{
     position:absolute;
+    opacity:0;
     background-color:rgba(255, 255, 255, .9);
     border-radius:rem(5px);
     padding:rem(15px);
     text-align:right;
-    left:100%;
+    left:rem(-9999px);
     cursor:default;
+    transition: all 0s;
+    transition:opacity .4s;
 
     @include phones{
         padding:rem(10px);
     }
+}
+.composotion__menu__active{
+    opacity:1;
+    left:100%;
 }
 .composotion__item{
     display:flex;
@@ -177,7 +221,7 @@
         margin-right:rem(55px);
 
         @include phones-xs{
-            margin-right:rem(35px);
+            margin-right:rem(20px);
         }
     }
 }
@@ -201,10 +245,10 @@
     top:47%;
 }
 .scroll__right{
-    right:rem(-35px);
+    right:rem(-45px);
     transform:rotate(-90deg);
 }
 .scroll__left{
-    left:rem(-35px);
+    left:rem(-45px);
     transform:rotate(90deg);
 }
