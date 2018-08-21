@@ -1,0 +1,44 @@
+.best{
+    background:url(../img/about-us/bg-img.jpg) center center / cover no-repeat;
+}
+.container__best{
+    justify-content:center;
+}
+.best__title{
+    text-align: center;
+    margin-bottom:45px;
+}
+.best__wrap{
+    display:flex;
+    justify-content:center;
+}
+.best__content{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    flex:1;
+    
+    &:not(:last-child){
+        margin-right:37px;
+    }
+}
+.content__img{
+    width:100px;
+    height:90px;
+    margin-bottom:25px;
+}
+.content__pic{
+    max-width:100%;
+    max-height:100%;
+}
+.content__title{
+    color:$secondary-text-color;
+    font:500 24px/28px Lifehack;
+    letter-spacing: -0.6px;
+    margin-bottom:10px;
+}
+.content__text{
+    color:$secondary-text-color;
+    opacity: 0.8;
+}

@@ -1,0 +1,15 @@
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.logo__link{
+    display:block;
+    width: 92px;
+    height: 69px;
+    margin-right:50px;
+    background:url(../img/header/logo.png) center center no-repeat;
+}
+.logo__name{
+    display:none;
+}

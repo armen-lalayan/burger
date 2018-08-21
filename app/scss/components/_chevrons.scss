@@ -1,0 +1,14 @@
+.scroll{
+    text-align:center;
+}
+.scroll__wrap{
+    width: 36px;
+    height: 21px;
+}
+.scroll__chevron{
+    fill:none;
+    stroke:$primary-text-color;
+    stroke-width:2px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}

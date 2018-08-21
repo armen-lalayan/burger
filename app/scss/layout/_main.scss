@@ -1,0 +1,31 @@
+.main{
+    background: url(../img/header/bg-img.jpg) center center / cover no-repeat;
+    padding-bottom:20px;
+    padding-top:10px;
+}
+.burger{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex:1;
+}
+.burger__img{
+    width:451px;
+    height:424px;
+    background:
+                url(../img/header/burger.png) right top no-repeat,
+                url(../img/header/burger-drops.png) left 35% no-repeat;
+                margin-right:10px;
+}
+.burger__text{
+    max-width:410px;
+}
+.burger__title{
+    color: $title-color;
+    margin:85px 0 30px;
+}
+.burger__text-desc{
+    color:$primary-text-color;
+    font: 500 65px/65px lifehack;
+    letter-spacing: -1.63px;
+}
