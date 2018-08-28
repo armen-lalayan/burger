@@ -38,6 +38,10 @@ html, body {
     top: 25%;
     opacity: 1;
 }
+
+@media screen and (max-width:768px){
+    #pp-nav{display:none;}
+}
 #pp-nav.right {
     right: 40px;
 }
