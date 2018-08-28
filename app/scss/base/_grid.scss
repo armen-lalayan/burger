@@ -55,6 +55,10 @@ button{
     display:flex;
     position:relative;
     overflow:hidden;
+
+    @include phones-xs{
+        min-height:rem(568px);
+    }
 }
 .container{
     width:97%;

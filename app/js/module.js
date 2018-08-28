@@ -1,8 +1,21 @@
 
+//  ------------------------------  pagepiling
+
+$(document).ready(function() {
+	$('#pagepiling').pagepiling({
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'eightPage','ninthPage'],
+        menu: '#myMenu'
+    });
+});
+
+//  ------------------------------  modal
+
+
 let burgerMenu = document.querySelector('.burger-menu');
 let navModal = document.querySelector('.nav-modal');
 let modalClose = document.querySelector('.nav-modal__close');
 let modalItem = document.getElementsByClassName('nav-modal__item');
+
 
 burgerMenu.addEventListener('click', function(){
     navModal.classList.add('nav-modal__active');
@@ -113,8 +126,137 @@ for(var i = 0; i < menuLink.length; i++){
 //  ------------------------------  slider
 
 $('.slider__items').slick({
-    infinite: true,
     autoplay: false
 
 });
  
+//  ------------------------------  form
+
+var myForm = document.querySelector('.form');
+var sendButton = document.querySelector('.button__send');
+
+var modalFormText = document.querySelector('.modal__form__text');
+
+myForm.addEventListener('submit', function(event){
+    event.preventDefault();
+    let target = event.target;
+    var formData = new FormData();
+    
+    formData.append('name', target.elements.name.value);
+    formData.append('phone', target.elements.telephone.value);
+    formData.append('comment', target.elements.coment.value);
+    formData.append('to', 'armani0322@gmail.com');
+
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'json';
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    xhr.send(formData);
+
+    xhr.addEventListener('load', function(){
+        
+        modalFormText.textContent = xhr.response.message;
+        $('#formModal').arcticmodal();
+
+    })
+})
+
+//  ------------------------------  reviews
+
+var reviewsButtons = document.querySelectorAll('.button__reviews');
+var reviewsTitle = document.querySelectorAll('.textblock__title');
+var reviewsText = document.querySelectorAll('.textblock__text');
+
+var modalTitle = document.querySelector('.modal__review__title');
+var modalText = document.querySelector('.modal__review__text');
+
+
+for(let i = 0; i < reviewsButtons.length; i++){
+
+    let buttonCurrent = reviewsButtons[i];
+    let titleCurrent = reviewsTitle[i];
+    let textCurrent = reviewsText[i];
+
+    buttonCurrent.addEventListener('click', function(event){
+        event.preventDefault();
+
+        modalTitle.textContent = titleCurrent.textContent;
+        modalText.textContent = textCurrent.textContent;
+
+        
+        $('#revievModal').arcticmodal();
+
+        
+    })
+}
+
+
+//  ------------------------------  map
+
+// function initMap(){
+//     var element = document.getElementById('map');
+//     var  options = {
+//         zoom:5,
+//         center: {lat:59.93863, lng:30.31413}
+//     };
+//     var myMap = new google.maps.Map(element, options); 
+// }
+
+//  ------------------------------  video
+
+    // Video
+    var video = document.getElementById("video");
+    // Buttons
+    var playButton = document.getElementById("play-pause");
+    var muteButton = document.getElementById("mute");
+    // Sliders
+    var seekBar = document.getElementById("seek-bar");
+    var volumeBar = document.getElementById("volume-bar");
+  
+  // play/pause button
+  playButton.addEventListener("click", function() {
+    if (video.paused == true) {
+      video.play();
+    //   playButton.innerHTML = "Pause";
+    } else {
+      video.pause();
+    //   playButton.innerHTML = "Play";
+    }
+  });
+
+  //  mute button
+muteButton.addEventListener("click", function() {
+    if (video.muted == false) {
+      video.muted = true;
+      muteButton.innerHTML = "Unmute";
+    } else {
+      video.muted = false;
+      muteButton.innerHTML = "Mute";
+    }
+  });
+
+  //seek bar
+seekBar.addEventListener("change", function() {
+    var time = video.duration * (seekBar.value / 100);
+    video.currentTime = time;
+  });
+video.addEventListener("timeupdate", function() {
+    var value = (100 / video.duration) * video.currentTime;
+    seekBar.value = value;
+  });
+
+  // Pause video
+
+seekBar.addEventListener("mousedown", function() {
+    video.pause();
+  });
+  
+  // Play video
+  seekBar.addEventListener("mouseup", function() {
+    video.play();
+  });
+
+  // volume bar
+volumeBar.addEventListener("change", function() {
+    video.volume = volumeBar.value;
+  });

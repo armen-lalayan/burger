@@ -26,15 +26,19 @@
     text-align:center;
     margin-bottom:rem(40px);
 
-    @include phones{
-        font-size:50px;
-        margin-bottom:rem(40px);
-        line-height:60px;
+    @include tablets{
+        font-size:60px;
     }
     @include phones{
         font-size:40px;
         margin-bottom:rem(20px);
         line-height:50px;
+    }
+
+    @include phones-xs{
+        font-size:30px;
+        margin-bottom:rem(5px);
+        line-height:35px;
     }
 }
 .form__column{
