@@ -197,28 +197,45 @@ ymaps.ready(init);
       
         function init(){ 
             var myMap = new ymaps.Map("map", {
-                center: [55.76, 37.64],
-                zoom: 7
+                center: [59.93863, 30.31413],
+                zoom: 12
             }); 
             
-            var myPlacemark = new ymaps.Placemark([55.76, 37.64], {
-                hintContent: 'Содержимое всплывающей подсказки',
-                balloonContent: 'Содержимое балуна'
+            var myPlacemark = new ymaps.Placemark([59.970531, 30.311384], {}, {
+                iconLayout: 'default#image',
+                iconImageHref: './img/map/map-marker.svg',
+                iconImageSize: [30, 42]
             });
-            
+             
             myMap.geoObjects.add(myPlacemark);
+
+            var myPlacemark2 = new ymaps.Placemark([59.948862, 30.382144], {}, {
+                iconLayout: 'default#image',
+                iconImageHref: './img/map/map-marker.svg',
+                iconImageSize: [30, 42]
+            });
+             
+            myMap.geoObjects.add(myPlacemark2);
+
+            var myPlacemark3 = new ymaps.Placemark([59.905637, 30.312023], {}, {
+                iconLayout: 'default#image',
+                iconImageHref: './img/map/map-marker.svg',
+                iconImageSize: [30, 42]
+            });
+             
+            myMap.geoObjects.add(myPlacemark3);
+
+            var myPlacemark4 = new ymaps.Placemark([59.912545, 30.493221], {}, {
+                iconLayout: 'default#image',
+                iconImageHref: './img/map/map-marker.svg',
+                iconImageSize: [30, 42]
+            });
+             
+            myMap.geoObjects.add(myPlacemark4);
         }
+ 
+            
 
-
-
-// function initMap(){
-//     var element = document.getElementById('map');
-//     var  options = {
-//         zoom:5,
-//         center: {lat:59.93863, lng:30.31413}
-//     };
-//     var myMap = new google.maps.Map(element, options); 
-// }
 
 //  ------------------------------  video
 
