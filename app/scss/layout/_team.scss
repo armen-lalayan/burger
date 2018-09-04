@@ -42,7 +42,12 @@
     }
 }
 .team__item-title{
-    font:400 24px/28px Gagalin;
+    display:inline-block;
+    // font:400 3rem/3rem Gagalin;
+    font-size:rem(24px);
+    font-family:Gagalin;
+    font-weight:400;
+    line-height:rem(28px);
     margin-bottom:rem(10px);
     cursor: pointer;
 
@@ -60,7 +65,7 @@
         font-size:18px;
     }
 }
-.team__list .is-activ{
+.team__item__active{ 
 
     .team__item-wrapper{
         height:rem(120px);

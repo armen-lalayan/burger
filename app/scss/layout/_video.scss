@@ -1,0 +1,100 @@
+.our-work{
+    background:url(../img/video/video-bg.jpg) center center / cover no-repeat;
+}
+.our-work__container{
+    justify-content:center;
+    align-items:center;
+}
+.our-work__title{
+    margin-bottom:rem(50px);
+
+    @include phones{
+        font-size:rem(38px);
+    }
+
+    @include phones-xs{
+        font-size:rem(36px);
+        line-height:rem(50px);
+        text-align:center;
+    }
+}
+.video__container{
+    display:flex;
+    align-items:center;
+    flex-direction:column;
+    max-width:rem(660px);
+
+    @include phones{
+        max-width:rem(400px);
+    }
+    @include phones-xs{
+        max-width:rem(310px);
+    }
+}
+#video {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+
+    
+  }
+#video-controls{
+    display:flex;
+    align-items:center;
+    width:99.7%;
+    padding:rem(5px);
+    padding-left:rem(20px);
+    background-color:#3E3E3E;
+}
+.play__range{
+    -webkit-appearance: none;
+    border-radius:2px;
+    width:rem(400px);
+    height:5px;
+    outline : none;
+    background:#626262;
+
+    @include phones-xs{
+        width:rem(100px);    }
+}
+.play__range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width:15px;
+    height:15px;
+    background:#626262;
+    border-radius:50%;
+    cursor:pointer;
+    transition:.1s;
+}
+.volume__range{
+    -webkit-appearance: none;
+    border-radius:2px;
+    width:rem(100px);
+    height:rem(5px);
+    outline : none;
+    background:#626262;
+
+    @include phones-xs{
+        width:rem(70px);  
+    }
+}
+.volume__range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width:rem(15px);
+    height:rem(15px);
+    background:#626262;
+    border-radius:50%;
+    cursor:pointer;
+}
+#play-pause,
+#mute{
+    cursor:pointer;
+}
+.play-pause,
+.mute{
+    background:#3E3E3E;
+    margin-right:rem(10px);
+}
+.play__range{
+    margin-right:rem(30px);
+}

@@ -39,7 +39,7 @@ button{
         font-size:62px;
     }
 }
-.page-wrapper{
+.page-wrapper{ 
     // overflow:hidden;
     width:100%;
     height:100%;
@@ -55,6 +55,10 @@ button{
     display:flex;
     position:relative;
     overflow:hidden;
+
+    @include phones-xs{
+        min-height:rem(568px);
+    }
 }
 .container{
     width:97%;

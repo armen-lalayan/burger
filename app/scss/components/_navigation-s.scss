@@ -6,20 +6,23 @@
     bottom:0;
     left:0;
     background-color:rgb(50, 50, 50);
-    padding:rem(30px);
-
+    padding:rem(20px);
+   
     @include tablets{
-        padding:rem(20px);
+        padding:rem(10px);
     }
+}
+.nav-modal__active{
+    display:block;
+    overflow:hidden;
+    z-index: 999;
 }
 .nav-modal__close{
     position:absolute;
-    top:rem(40px);
-    right:rem(40px);
     
     @include tablets{
-        top:rem(30px);
-        right:rem(30px);
+        top:rem(35px);
+        right:rem(40px);
     }
 }
 .nav-modal__close:after {
@@ -28,6 +31,10 @@
     width:rem(20px);
     height:rem(20px);
     background: url(../img/menu/rectangle.png) center center no-repeat;
+}
+
+.nav-modal__logo{
+    margin-left:rem(28px);
 }
 .nav-modal__menu{
     display:flex;
@@ -44,6 +51,9 @@
     position:relative;
     margin-bottom:rem(60px);
 
+    @include phones{
+        margin-bottom:rem(40px);
+    }
     @include phones-xs{
         margin-bottom:rem(25px);
     }
@@ -55,6 +65,9 @@
         left:50%;
         color:$primary-text-color;
 
+        @include phones{
+            bottom:rem(-30px);
+        }
         @include phones-xs{
             bottom:rem(-25px);
         }
@@ -65,6 +78,9 @@
     font-size: rem(26px);
     text-transform: uppercase;
 
+    @include phones{
+        font-size:rem(22px);
+    }
     @include phones-xs{
         font-size: rem(18px);
     }
